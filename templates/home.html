@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+<h1 style="text-align: center; font-size: 30pt;">The website where you block yourself</h1>
+{% endblock %}
+
+{% block body %}
+<p style="text-align: center; margin-top: 30pt;">
+    <img src="{{url_for('static', filename='stop.png')}}" , alt="computer", width="250", height="250">
+</p>
+
+<p style="text-align: center; margin-top: 30pt; font-size: 17pt;">please enter the number of seconds you wish to be blocked</p>
+
+<div style="text-align: center;">
+    <form action="/", method="POST">
+        <input type="number", min="0", max="99999" step="1", placeholder="Seconds:", name="entered_time">
+        <button type="submit">Block!</button>
+    </form>
+</div>
+{% endblock %}

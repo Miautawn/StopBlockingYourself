@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+<p style="text-align: center; margin-top: 30pt;">
+    <img src="{{url_for('static', filename='stop.png')}}" , alt="computer", width="250", height="250">
+</p>
+
+<p style="text-align: center; margin-top: 30pt; font-size: 17pt;">you are blocked for {{seconds}} seconds</p>
+{% endblock %}
